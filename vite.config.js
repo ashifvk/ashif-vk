@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { clickToComponent } from 'vite-plugin-react-click-to-component'
+import { reactClickToComponent } from 'vite-plugin-react-click-to-component'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     react(),
-    clickToComponent(),
-  ],
-})
+    command === 'serve' ? reactClickToComponent() : null,
+  ].filter(Boolean),
+}))
