@@ -69,7 +69,7 @@ export default function Portfolio(){
               <button className="bp" onClick={()=>go("Projects")}>View Projects →</button>
               <button className="bs" onClick={()=>go("Contact")}>Get in Touch</button>
             </div>
-            <div style={{display:"flex",gap:40,marginTop:48,flexWrap:"wrap"}}>
+            <div className="status-div" >
               {[["2+","Years Experience"],["5+","Products Shipped"],["2","Companies"]].map(([n,l])=>(
                 <div key={l}><div style={{fontFamily:"'Syne',sans-serif",fontSize:30,fontWeight:800}}>{n}</div><div style={{fontSize:12,color:"#4A5568",fontWeight:500,marginTop:2}}>{l}</div></div>
               ))}
@@ -103,7 +103,7 @@ export default function Portfolio(){
             <div style={{background:"#0D1120",border:"1px solid #00E5FF22",borderRadius:16,padding:28}}>
               <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10,marginBottom:10}}>
                 <div><h3 style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:20}}>Software Engineer</h3><div style={{color:"#00E5FF",fontWeight:600,fontSize:14,marginTop:4}}>YouGotaGift Pvt Ltd</div></div>
-                <span className="tag" style={{background:"#34D39911",color:"#34D399",border:"1px solid #34D39933"}}>Current</span>
+                <span className="tag tag-experience" style={{background:"#34D39911",color:"#34D399",border:"1px solid #34D39933"}}>Current</span>
               </div>
               <p style={{color:"#6A7A9B",fontSize:14,lineHeight:1.7}}>Building and scaling a product-based gifting platform. Working across the full stack to deliver reliable, high-quality features to end users globally. Contributing to platform architecture, API design, and engineering standards.</p>
               <div style={{marginTop:16,display:"flex",gap:6,flexWrap:"wrap"}}>{["Product Engineering","Agile","API Design","Scalability"].map(t=><span key={t} className="tc">{t}</span>)}</div>
@@ -114,7 +114,7 @@ export default function Portfolio(){
             <div style={{background:"#0D1120",border:"1px solid #1A2035",borderRadius:16,padding:28}}>
               <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:10,marginBottom:10}}>
                 <div><h3 style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:20}}>Django Developer</h3><div style={{color:"#A78BFA",fontWeight:600,fontSize:14,marginTop:4}}>Primal Codes Technologies, Calicut</div></div>
-                <span className="tag" style={{background:"#A78BFA11",color:"#A78BFA",border:"1px solid #A78BFA33"}}>Oct 2023 – Nov 2024</span>
+                <span className="tag tag-experience" style={{background:"#A78BFA11",color:"#A78BFA",border:"1px solid #A78BFA33"}}>Oct 2023 – Nov 2024</span>
               </div>
               <p style={{color:"#6A7A9B",fontSize:14,lineHeight:1.7}}>Shipped 5 full-stack products spanning vehicle sales, food ordering, edtech, travel, and e-commerce. Led backend development with Django, integrated payment gateways, built CRM systems, collaborated on React/Next.js frontends.</p>
               <div style={{marginTop:16,display:"flex",gap:6,flexWrap:"wrap"}}>{["Django","Python","React","Next.js","REST APIs","Stripe","Razorpay"].map(t=><span key={t} className="tc">{t}</span>)}</div>
@@ -187,9 +187,9 @@ export default function Portfolio(){
           <div style={{display:"flex",flexDirection:"column",gap:16,alignItems:"center"}}>
             <a href="mailto:ashifvk503@email.com" className="cl" style={{fontSize:18,color:"#E8EDF5"}}>ashifvk503@email.com</a>
             <div style={{display:"flex",gap:24,marginTop:8}}>
-              <a href="#" className="cl">GitHub</a>
-              <a href="#" className="cl">LinkedIn</a>
-              <a href="#" className="cl">Twitter</a>
+              <a href="https://github.com/ashifvk" className="cl">GitHub</a>
+              <a href="https://www.linkedin.com/in/ashif-vk-921260177/" className="cl">LinkedIn</a>
+              <a href="https://www.instagram.com/ashiff.vk" className="cl">Instagram</a>
             </div>
           </div>
           <div style={{marginTop:48}}><button className="bp" onClick={()=>window.location.href='mailto:ashifvk@email.com'}>Send me a message →</button></div>
