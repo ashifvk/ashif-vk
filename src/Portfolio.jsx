@@ -57,8 +57,14 @@ export default function Portfolio(){
     e.preventDefault();
     setIsSubmitting(true);
     try {
+      const templedata = {
+        title : '- ' + formData.name,
+        name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      }
       // NOTE: User needs to replace placeholders with their own EmailJS keys
-      await emailjs.send('service_3hmzz0g', 'template_ot47zbh', formData, 'sNnSYCZsGp2Hhv-a4');
+      await emailjs.send('service_3hmzz0g', 'template_ot47zbh', templedata, 'sNnSYCZsGp2Hhv-a4');
       await new Promise(resolve => setTimeout(resolve, 1500));
       alert("Message sent successfully!");
       setFormData({ name: '', email: '', message: '' });

@@ -303,9 +303,6 @@ html {
     gap:10px;
     margin: 0 30px 0 30px;
   }
-  .bp{
-    display: none;
-  }
 
   .status-div{
     display: flex;
