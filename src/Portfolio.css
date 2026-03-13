@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080B12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00E5FF44;
+  border-radius: 4px;
+}
+
+.nl {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 0;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nl::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #00E5FF;
+  transition: width 0.25s;
+}
+
+.nl:hover::after,
+.nl.act::after {
+  width: 100%;
+}
+
+.nl:hover,
+.nl.act {
+  color: #00E5FF;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.sp {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid #1E2535;
+  background: #0D1120;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8A98B8;
+  transition: all 0.2s;
+}
+
+.sp:hover {
+  border-color: #00E5FF55;
+  color: #00E5FF;
+  background: #00E5FF0A;
+}
+
+.pc {
+  border: 1px solid #1A2035;
+  background: #0D1120;
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.pc:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px #00000066;
+}
+
+.sc {
+  border: 1px solid #1A2035;
+  background: #0D1120;
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s;
+}
+
+.sc:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px #00000066;
+}
+
+.tc {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #141927;
+  color: #6A7A9B;
+  border: 1px solid #1E2535;
+  margin: 2px;
+}
+
+.cl {
+  color: #00E5FF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.cl:hover {
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 #00E5FF44;
+  }
+  70% {
+    box-shadow: 0 0 0 16px #00E5FF00;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #00E5FF00;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gt {
+  background: linear-gradient(135deg, #00E5FF, #A78BFA, #FF6B6B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: shimmer 4s linear infinite;
+}
+
+.bp {
+  padding: 8px 20px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #00E5FF;
+  color: #080B12;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bp:hover {
+  background: #33EEFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #00E5FF44;
+}
+
+.bs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  background: transparent;
+  color: #E8EDF5;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #1E2535;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bs:hover {
+  border-color: #00E5FF55;
+  color: #00E5FF;
+  transform: translateY(-2px);
+}
+
+.mb {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, #00E5FF0F 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 80% 80%, #A78BFA08 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.gb {
+  background-image: linear-gradient(#1A203511 1px, transparent 1px), linear-gradient(90deg, #1A203511 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.el {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #00E5FF44, #A78BFA22, transparent);
+}
+
+.ed {
+  position: absolute;
+  left: 12px;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00E5FF;
+  animation: pulse-ring 2.5s infinite;
+}
+
+.edp {
+  background: #1E2535 !important;
+  animation: none !important;
+}
+.nav-links{
+  display:flex;
+  gap:32px;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .left{
+    order: 2;
+  }
+  .right{
+    order: 1;
+  }
+  .nl {
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 0;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links{
+    display:flex;
+    gap:12px;
+    margin: 0 30px 0 30px;
+  }
+  .bp{
+    display: none;
+  }
+}
